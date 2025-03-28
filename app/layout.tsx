@@ -24,15 +24,13 @@ export default function RootLayout({ children }) {
                 return (
                   <li
                     key={meeting.id}
-                    className={`bg-white shadow-lg p-4 ${
-                      isActive ? 'bg-blue-100 border-l-4 border-blue-600' : 'hover:bg-gray-50'
-                    } transition duration-300`}
+                    className={`bg-white shadow-lg p-4 ${isActive ? 'bg-blue-100 border-l-4 border-blue-600' : 'hover:bg-gray-50'
+                      } transition duration-300`}
                   >
                     <Link
                       href={`/pages/meetings/${meeting.id}`}
-                      className={`${
-                        isActive ? 'text-blue-800 font-semibold' : 'text-blue-600 hover:text-blue-800'
-                      }`}
+                      className={`${isActive ? 'text-blue-800 font-semibold' : 'text-blue-600 hover:text-blue-800'
+                        }`}
                     >
                       <span className="font-semibold">{meeting.title}</span>
                     </Link>
