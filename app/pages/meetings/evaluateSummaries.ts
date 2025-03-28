@@ -3,7 +3,7 @@ import { EvalData } from "@/app/data";
 
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true
 });
 
@@ -27,7 +27,7 @@ Summary 1:
 Summary 2:
 "${meeting.summary2}"
 
-Provide a score (1-10) for each summary and a brief explanation of which summary is better under the title "Overall".
+Provide a score (1-10) for each summary and a brief explanation of which summary is better "Overall".
 `;
 
   const response = await openai.chat.completions.create({
